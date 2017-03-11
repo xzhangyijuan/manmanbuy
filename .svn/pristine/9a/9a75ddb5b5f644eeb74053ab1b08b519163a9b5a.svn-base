@@ -1,0 +1,353 @@
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset, img, input, button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "microsoft yahei";
+}
+
+select, input {
+  vertical-align: middle;
+}
+
+select, input, textarea {
+  font-size: 12px;
+  margin: 0;
+}
+
+/*禁止手动修改大小*/
+textarea {
+  resize: none;
+}
+
+/*去掉图片底部默认空白缝隙*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/*合并外连线*/
+table {
+  border-collapse: collapse;
+}
+
+body {
+  font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+  color: #666;
+  background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+s, i, em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+/*公共类*/
+.w {
+  /*版心*/
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+/*css初始化完成*/
+//头部导航
+header {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #f4483e;
+  > .h-back {
+    float: left;
+    > a {
+      display: block;
+      width: 50px;
+      text-align: center;
+      i {
+        display: inline-block;
+        font-size: 18px;
+        padding-top: 14px;
+        color: #ffffff;
+      }
+    }
+  }
+  > .h-app {
+    float: right;
+    padding-top: 6px;
+    > a {
+      display: block;
+      width: 50px;
+      height: 40px;
+      line-height: 40px;
+      img {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+      }
+    }
+  }
+  > span {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-family: "microsoft yahei";
+  }
+}
+
+//肯德基列表样式
+#conpon_list {
+  #conpon-lip {
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        height: 100px;
+        width: 100%;
+        border-bottom: 1px solid #e7e7e7;
+        overflow: hidden;
+        position: relative;
+        a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          padding: 10px;
+          color: #5a5a5a;
+          //图片
+          .pic {
+            float: left;
+            img {
+              display: block;
+              //最大宽度
+              max-width: 100px;
+              vertical-align: middle;
+            }
+          }
+          //文字
+          .info {
+            float: left;
+            height: 78px;
+            margin-left: 10px;
+            width: 60%;
+            //margin-right:10px;
+            padding-left: 30px;
+            h3, h2 {
+              font-size: 14px;
+              color: #333333;
+              line-height: 20px;
+            }
+            h2 {
+              font-weight: bold;
+              line-height: 24px;
+            }
+            p {
+              font-size: 12px;
+              color: #EE7700;
+              margin-top: 10px;
+              height: 24px;
+            }
+          }
+          //右边尖括号
+           i {
+            display: inline-block;
+            font-size: 10px;
+            padding-top: 20px;
+            color: #848484;
+            float: right;
+            -webkit-transform: scale(1,2);
+          }
+        }
+        //&::after{
+        //  content:" >" ;
+        //  position: absolute;
+        //  font-size: 20px;
+        //  right: 5px;
+        //  top: 45px;
+        //  -webkit-transform: scale(1,6);
+        //}
+      }
+
+    }
+  }
+}
+//优惠券下边导航样式
+#coupon_Menu {
+  margin-top: 20px;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  float: left;
+  //上边
+  border-top: solid 1px #ebebeb;
+  //下边
+  border-bottom: 1px solid #ccc;
+  padding-left: 8px;
+  font-size: 14px;
+  //背景色
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+  a {
+    color: #000;
+  }
+}
+
+/*遮罩层*/
+#box {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0,0,0,.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  &::before,&::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 270px;
+    background: #7b7b7b;
+    border-radius: 4px;
+    top:74px;
+    left: 50%;
+    transform:rotate(30deg);
+  }
+  &::after{
+    transform:rotate(-30deg);
+  }
+}
+#box>.placeholder {
+  border: 20px solid #7b7b7b;
+  border-radius: 20px;
+  box-shadow: none;
+  width: 240px;
+  height: 200px;
+  margin: 260px auto 0;
+  //background-color: red;
+  transform: translateY(-50%);
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+#box>.placeholder ul {
+  width: 50000px;
+  position: absolute;
+  height: 160px;
+  /*去除图片左右的间距*/
+  font-size: 0;
+}
+#box>.placeholder ul img {
+  width: 200px;
+  height: 160px;
+  float: left;
+  //overflow: hidden;
+}
+/*轮播方向点*/
+#box>.placeholder .arrow {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: none;
+  cursor: pointer;
+}
+#box>.placeholder .arrow span {
+  width: 25px;
+  height: 50px;
+  background-color: #000;
+  opacity: .3;
+  float: left;
+  font: 24px/50px '微软雅黑';
+  text-align: center;
+  color:#fff;
+  z-index: 9;
+}
+
+#box>.placeholder .arrow span:nth-of-type(2) {
+  float: right;
+}
+
+
+
+

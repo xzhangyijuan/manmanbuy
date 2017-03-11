@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title自己起名字-->
+    <title>慢慢卖项目</title>
+
+    <?php include('./common/style.html') ?>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <!-- 头部header-->
+    <?php include('./common/header.html') ?>
+    
+    <!-- 导航栏-->
+    <div class="index-nav container">
+        <div class="row">
+            <!-- 导航栏内容填入的坑-->
+        </div>
+    </div>
+
+    <!-- 折扣推荐-->
+    <div class="index-cuxiao">
+        <!-- 折扣推荐的头部标题-->
+        <a href="/html/moneyctrl.html">
+            <div class="index-title-head">
+                <span>超值折扣推荐</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt=""/>
+            </div>
+        </a>
+
+        <!-- 折扣推荐商品内容-->
+        <div class="index-cuxiao-pro">
+            <div class="index-cuxiaoPro-list">
+                <ul>
+                    <!-- 折扣推荐的商品信息填入的坑-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- 更多优惠信息-->
+        <div class="index-cuxiaoPro-morebar">
+            <a href="/html/moneyctrl.html">更多优惠信息 »</a>
+        </div>
+    </div>
+
+    <!-- 品牌排行-->
+    <div class="index-top10-bar">
+        <a href="/html/brandTitle.html">
+            <div class="index-title-head">
+                <span>品牌排行</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt=""/>
+            </div>
+        </a>
+    </div>
+
+    <!-- 底部-->
+    <?php include('./common/footer.html') ?>
+
+    <!-- 浮动的下载链接-->
+    <?php include('./common/flowDownload.html') ?>
+
+    <!-- 导航栏处的模版-->
+    <script type="text/template" id="index-nav-tpl">
+        {{each result as val i}}
+            <div class="index-inner col-xs-3" id="{{val.indexmenuId}}">
+                <a {{val.titlehref == '#'? '': 'href=/html/' + val.titlehref}}>
+                    {{#val.img}}
+                    <p>{{val.name}}</p>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+
+    <!-- 折扣推荐中的模版-->
+    <script type="text/template" id="index-cuxiao-tpl">
+        {{each result as val i}}
+            <li class="clearfix">
+                <a href="/html/saveMoney-shop.html?productId={{val.productId}}">
+                    <div class="pic">
+                        {{#val.productImgSm}}
+                    </div>
+                    <div class="clearfix info">
+                        <div class="title">
+                            {{val.productName}}
+                            <span>{{val.productPinkage}}</span>
+                        </div>
+                        <div class="other">
+                            <span class="mall">{{val.productFrom}} | {{val.productTime}}</span>
+                                        <span class="common">
+                                            <i class="icon-common"></i>
+                                            {{getCount(val.productComCount)}}
+                                        </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <?php include('./common/script.html') ?>
+</body>
+</html>

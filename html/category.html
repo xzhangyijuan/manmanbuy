@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../css/getCategory.css"/>
+    <title>比价搜索--慢慢卖</title>
+</head>
+<body>
+<?php include('../common/header.html')?>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+</div>
+
+<!-- 底部-->
+<?php include('../common/footer.html') ?>
+
+<!-- 浮动的下载链接-->
+<?php include('../common/flowDownload.html') ?>
+
+
+<!--模版-->
+<script type="text/template" id="panel-default-tpl">
+    {{ each list }}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{ $value.titleId }}">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $value.titleId }}" aria-expanded="true" aria-controls="collapseOne">
+                    {{ $value.title }}
+                    <span class="glyphicon glyphicon-menu-down icon-font"></span>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{ $value.titleId }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body{{ $value.titleId }} panel-body-main">
+                <div class="row panel-body-row">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ /each }}
+</script>
+
+<script id="panel-body-tpl" type="text/template">
+    <div class="row panel-body-row">
+        {{ each list }}
+        <div class="col-xs-4"><a href="/html/getCategory-function.html?categoryId={{ $value.categoryId }}">{{ $value.category }}</a></div>
+        {{ /each }}
+    </div>
+</script>
+
+<?php include('../common/script.html') ?>
+</body>
+</html>

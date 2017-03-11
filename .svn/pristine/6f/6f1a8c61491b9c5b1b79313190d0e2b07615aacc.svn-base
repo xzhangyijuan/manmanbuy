@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- title自己起名字-->
+    <title>国内折扣</title>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../css/gnzk/gnzk-index.css"/>
+</head>
+<body>
+    <!--头部-->
+    <header class="gnzk-header" id="header">
+        <a href="/" class="glyphicon glyphicon-menu-left" ></a>
+        <h1>国内折扣</h1>
+        <div class="gnzk-header-bottom">
+            <a href="/"></a>
+        </div>
+    </header>
+    <!--主体-->
+    <section id="gnzk-menu">
+        <div class="row">
+            <!--国内折扣模板的坑-->
+        </div>
+    </section>
+
+    <!--底部导航栏-->
+    <nav class="gnzk-nav">
+        <a href="/">首页</a>&nbsp;&gt;&nbsp;
+
+        <a href="#">国内折扣</a>
+    </nav>
+
+    <!-- 底部-->
+    <?php include('../common/footer.html') ?>
+
+    <!-- 浮动的下载链接-->
+    <?php include('../common/flowDownload.html') ?>
+
+    <!-- 国内折扣模板-->
+    <script id="gnzk-tpl" type="text/html">
+        {{each list}}
+        <div class="col-xs-6" style="padding:0px">
+                <a href="gnzk-shop.html?productid={{$value.productId}}">
+                    {{#$value.productImg}}
+                    <p>{{$value.productName}}</p>
+                    <p>{{$value.productPrice}}</p>
+                    <span>{{$value.productTime}}</span>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+    <?php include('../common/script.html') ?>
+</body>
+</html>

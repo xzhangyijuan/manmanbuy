@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商城导航--慢慢买</title>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base2.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/bijia.css"/>
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+</head>
+<body>
+    <!--头部与搜索栏部分-->
+    <?php include('../common/header.html')?>
+
+    <div id="nav-product">
+
+    </div>
+
+    <!--tab栏，产品列表模板-->
+    <script id="product-detail-tpl" type="text/template">
+        {{ each list }}
+        <nav class="bijia-nav">
+            <a href="http://m.manmanbuy.com">首页</a>
+            >
+            <a href="/html/getCategory-function.html?categoryId={{ $value.categoryId }}">平板电视</a>
+            >
+            <a href="/html/getCategory-bijia.html?productId={{ $value.productId }}">{{ ProductPrice2($value.productName) }}</a>
+        </nav>
+        <div class=" bijia-product-detail">
+            <div class="product-detail-pic">
+                <a href="javascript:void(0)">{{ #$value.productImg }}</a>
+                <a href="javascript:void(0)"><img class="sc" src="../images/sc.jpg" alt=""/></a>
+            </div>
+            <div class="product-detail-tit">
+                <a href="javascript:void(0)">{{ $value.productName }}</a>
+            </div>
+            <div class="product-detail-info">
+                <ul>
+                    <li class="zdj">
+                        <span >最 低 价 :</span>
+                        <i class="price">￥1149.00</i>
+                    </li>
+                    <li class="zdlz">
+                        <span >最低来自 :</span>
+                        <i>京东商城</i>
+                    </li>
+                    <li class="qwpl">
+                        <span >全网评论 :</span>
+                        <i>3123123条</i>
+                    </li>
+                    <li class="yxpl">
+                        <span >优选评论 :</span>
+                        <i>4153条</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bijia-tab">
+            <ul>
+                <li class="bjgm"><a href="">比价购买<img src="../images/tab_ar.png" alt=""/></a></li>
+                <li><a href="">产品参数</a></li>
+                <li><a href="">优选评价</a></li>
+            </ul>
+        </div>
+        <div class="bijia-plist">
+            {{ #$value.bjShop }}
+        </div>
+        {{ /each }}
+    </script>
+
+
+    <!--网友评论模板-->
+    <script id="friend-comment-tpl" type="text/template">
+        {{ each list }}
+        <div class="pj_list">
+            <table width="100%">
+                <tbody>
+                <tr class="list-t1">
+                    <td class="name" align="left">{{ $value.comName }}                </td>
+                    <td class="data" align="right">{{ $value.comTime }}                </td>
+                </tr>
+                <tr class="list-t2">
+                    <td align="left">
+                        <span class="star">
+                            <em class="glyphicon glyphicon-star"></em>
+                            <em class="glyphicon glyphicon-star"></em>
+                            <em class="glyphicon glyphicon-star"></em>
+                            <em class="glyphicon glyphicon-star"></em>
+                            <em class="glyphicon glyphicon-star"></em>
+                        </span>
+                    </td>
+                    <td class="data" align="right">                   {{ $value.comFrom }}                </td>
+                </tr>
+                <tr class="list-m">
+                    <td colspan="2" class="">
+                        {{ $value.comContent }}
+                    </td>
+                </tr>
+                <tr class="list-b">
+                    <td colspan="2" class="">
+                        <a href="/html/getCategory-bijia.html?productId={{ $value.productId }}" style="font-size:12px; color:#999;">回复</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        {{ /each }}
+    </script>
+
+
+    <!--网友评论表头部分-->
+    <div class="bijia-pj_t">
+        网友评论
+    </div>
+    <!--网友评论主体部分-->
+    <div class="bijia-pj_m">
+
+    </div>
+
+    <!--app广告栏部分-->
+    <div class="bijia-appbanner clearfix">
+        <div class="btn">
+            <a href="">立即打开</a>
+        </div>
+        <div class="applogo">
+            <img src="../images/applogo.png" alt=""/>
+        </div>
+        <div class="tit">
+            慢慢买APP
+            <p>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>
+        </div>
+    </div>
+
+
+    <?php include('../common/footer.html')?>
+
+    <!-- 浮动的下载链接-->
+    <?php include('../common/flowDownload.html') ?>
+
+</body>
+<?php include('../common/script.html') ?>
+
+</html>

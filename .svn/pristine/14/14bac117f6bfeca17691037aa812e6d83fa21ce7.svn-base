@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>优惠券</title>
+    <!-- 第三方的样式-->
+    <?php include('../common/style.html')?>
+    <!-- 引入自己的样式-->
+    <link rel="stylesheet" href="../css/coupon/coupon.css"/>
+</head>
+<body>
+<!--头部导航-->
+<header id="header">
+    <div class="h-back">
+        <a href="/" class="iconfont">
+            <i class=" icon-back glyphicon glyphicon-menu-left"></i>
+        </a>
+    </div>
+    <div class="h-app">
+        <a href="#">
+            <img src="../images/header_app.png" alt=""/>
+        </a>
+    </div>
+    <span>优惠券</span>
+</header>
+
+<div id="conpon" class="clearfix">
+    <div id="conpon-inner">
+        <!-- 优惠券的坑-->
+    </div>
+    <!--优惠券下导航-->
+    <div id="coupon_Menu" class="nav">
+        <a href="/">首页</a>&nbsp;&gt;&nbsp;
+        <a href="/html/coupon.html">优惠券</a>
+    </div>
+</div>
+
+<!-- 底部-->
+<?php include('../common/footer.html') ?>
+
+<!-- 浮动的下载链接-->
+<?php include('../common/flowDownload.html') ?>
+
+<!-- 肯德基模版 -->
+<script id="coupon-title-tpl" type="text/html">
+    {{each result}}
+    <div class="coupon-title" >
+        <ul>
+            <li>
+                <a class="coupon-a" href="./coupon_list.html?id={{$value.couponId}}">
+                    <img src="{{$value.couponImg}}" alt="">
+
+                    <p id="title">{{$value.couponTitle}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    {{/each}}
+</script>
+</body>
+
+<?php include('../common/script.html') ?>
+</html>

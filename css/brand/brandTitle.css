@@ -1,0 +1,72 @@
+#header a.log {
+  height: 100%;
+}
+#header a.log img {
+  height: 25px;
+}
+#brand-title {
+  background-color: #eee;
+}
+#brand-title > .product-title {
+  position: relative;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #cccccc;
+}
+#brand-title > .product-title > .breadcrumb {
+  margin-bottom: 0px;
+}
+#brand-title > .product-title > .breadcrumb > li::before {
+  content: "";
+}
+#brand-title > .product-title > .breadcrumb > li::after {
+  content: " >";
+}
+#brand-title > .product-title > .breadcrumb > li:nth-last-of-type(1)::after {
+  content: " ";
+}
+#brand-title > .product-title > .btn {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  height: 30px;
+}
+#brand-title > .bigTitle {
+  background-color: #eee;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+#brand-title > .bigTitle > h4 {
+  background-color: #eee;
+  padding: 10px;
+  margin: 5px 0;
+  color: #874604;
+  border: 1px solid #ccc;
+}
+#brand-title > .brand-List {
+  background-color: #eee;
+  padding-bottom: 1px;
+}
+#brand-title > .brand-List > .list-title {
+  position: relative;
+  background-color: #eee;
+}
+#brand-title > .brand-List > .list-title a {
+  display: block;
+  color: #000;
+}
+#brand-title > .brand-List > .list-title h5 {
+  padding: 10px;
+  /*
+                margin-top: 10px;
+                margin-bottom: 10px;*/
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+#brand-title > .brand-List > .list-title i {
+  position: absolute;
+  font-size: 8px;
+  right: 20px;
+  top: 10px;
+  color: #999;
+  -webkit-transform: scale(1.5, 0.7);
+}

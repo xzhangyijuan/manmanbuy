@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>凑单品--慢慢买比价网</title>
+    <?php include('./../common/style.html') ?>
+    <link rel="stylesheet" href="./../css/getgsshop/getgsshop.css"/>
+</head>
+<body>
+<!--顶部部分-->
+<header class="header-bar" id="header">
+    <div class="inner">
+        <div class="left">
+            <a href="/" class="icon-back glyphicon glyphicon-chevron-left"></a>
+        </div>
+        <div class="gt-center">
+            <h1>凑单品</h1>
+        </div>
+        <div class="right"></div>
+
+    </div>
+</header>
+<!--中间盒子部分-->
+<div class="coudan-box">
+    <div class="list">
+        <div class="bh">
+            <div class="filter">
+                <ul class="sel">
+                    <li id="shop-name">
+                        <a href="javascript:;" class="shop-one">
+                            <span>京东</span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                    </li>
+                    <li id="area-name">
+                        <a href="javascript:;">
+                            <span>华北</span>
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            全部价格
+                            <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <i class="glyphicon glyphicon-search"></i>
+            </div>
+
+            <!-- 四个隐藏的下拉-->
+            <div class="popsort popbox">
+                <ul class="shop">
+                    <!-- 下拉模板第一个坑-->
+                </ul>
+            </div>
+            <div class="popparea popbox">
+                <ul class="area">
+                    <!-- 模板的第二个坑-->
+                </ul>
+            </div>
+            <div class="popprice popbox">
+                <ul>
+                    <li>
+                        <a href="javascript:;">全部价格</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popsearch popbox border-bottom-img">
+                <div class="formsch">
+                    <div class="txt">
+                        <input type="search" placeholder="搜索您想要的凑单品"/>
+                        <i class="input-search"></i>
+                    </div>
+                    <div class="smt">
+                        <input type="button" name="search" value="搜索"/>
+                    </div>
+                </div>
+                <div class="select ui-border-b">
+                    <div class="sort">排序</div>
+                    <div class="c clearfix">
+                        <ul>
+                            <li>
+                                <a href="">销量</a>
+                            </li>
+                            <li>
+                                <a href="">价格 <i class="glyphicon glyphicon-arrow-up"></i></a>
+                            </li>
+                            <li>
+                                <a href="">价格 <i class="glyphicon glyphicon-arrow-down"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="select second">
+                    <div class="fenlei">分类</div>
+                    <div class="c">
+                        <ul>
+                            <li>
+                                <a href="">全部</a>
+                            </li>
+                            <li>
+                                <a href="">家具</a>
+                            </li>
+                            <li>
+                                <a href="">数码</a>
+                            </li>
+                            <li>
+                                <a href="">办公</a>
+                            </li>
+                            <li>
+                                <a href="">个护</a>
+                            </li>
+                            <li>
+                                <a href="">食品</a>
+                            </li>
+                            <li>
+                                <a href="">母婴</a>
+                            </li>
+                            <li>
+                                <a href="">服饰</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容主体块-->
+        <div class="bd container">
+            <ul id="row" class="product clearfix">
+              <!-- 第三个坑-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- 底部-->
+    <?php include('./../common/footer.html') ?>
+
+    <!-- 浮动的下载链接-->
+    <?php include('./../common/flowDownload.html') ?>
+
+
+<!--下拉模板 商店-->
+<script type="text/template" id="select-tpl">
+    {{ each list as $value i }}
+    <li data-shopId='{{$value.shopId}}'>
+        <a href="javascript:;">{{$value.shopName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+<!--区域模板的坑-->
+<script type="text/template" id="select-two-tpl">
+    {{ each list as $value i}}
+    <li data-areaId='{{$value.areaId}}'>
+        <a href="javascript:;">{{ $value.areaName}}</a>
+    </li>
+    {{ /each }}
+</script>
+
+<!--第三个坑的模板-->
+<script type="text/template" id="product-tpl">
+    {{ each list as $value i }}
+    <li class="col-xs-6">
+        <a href="javascript:;">
+            <div class="pic">
+                <img src="{{ $value.productImg}}" alt=""/>
+            </div>
+            <div class="title">
+                {{ $value.productName }}
+            </div>
+            <div class="other">
+                <div class="price">
+                    {{ $value.productPrice }}
+                </div>
+                <div class="btn"></div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+<?php include('./../common/script.html') ?>
+</body>
+</html>

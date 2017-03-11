@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../css/saveMoney-shop.css"/>
+    <link rel="stylesheet" href="../css/ten/common.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+
+    <title></title>
+</head>
+<body>
+<!-- 头部-->
+<header class="gnzk-shop-header" id="header">
+    <a href="/" class="glyphicon glyphicon-menu-left" ></a>
+    <h1>国内折扣</h1>
+    <div class="gnzk-shop-header-bottom">
+        <a href="/"></a>
+    </div>
+</header>
+
+<!-- 商品详情-->
+<section>
+    <div id="gnzk-shop-menu">
+        <!--商品详情的坑-->
+    </div>
+    <div class="gnzk-shop-middle">
+        <img src="../images/mmbweixin2.png"/>
+    </div>
+
+    <!--底部-->
+    <footer>
+        <div class="index-foot-top">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#header">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""/>
+                返回顶部
+            </a>
+        </div>
+        <div class="index-foot-bottom">
+            <p style="height: 40px"></p>
+        </div>
+    </footer>
+
+    <!-- 浮动的下载链接-->
+    <?php include('../common/flowDownload.html') ?>
+
+    <!--底部导航-->
+    <div class="shop-nav">
+        <a href="#" class="shop-comment-money"><i class="iconfont2">&#xe645;</i><span>评论</span></a>
+        <a href="/" class="shop-buy">前往购买</a>
+    </div>
+</section>
+
+<!-- 商品详细信息的模板-->
+<script id="gnzk-shop-tpl" type="text/html">
+    <!--{{each result}}-->
+    <div class="gnzk-shop-box">
+        <div class="gnzk-shop-tpl">
+            <h3 class="shopName-tit">{{$value.productName}}</h3>
+            <p>{{$value.productPinkage}}</p>
+            <div>
+                <span>{{$value.productFrom}}</span>
+                <span>{{$value.productTime}}</span>
+                <span>{{$value.productTips}}</span>
+            </div>
+            <div class="clearfix small-img" >
+                {{#$value.productImgSm}}
+                <p>{{ getString1($value.productInfo2) }}</p>
+                <p>{{ getString($value.productInfo2) }}</p>
+            </div>
+        </div>
+        <div class="max-img">
+            {{ #$value.productImgLg }}
+        </div>
+
+        <div class="address">
+            {{ #$value.productCity }}
+        </div>
+
+        <div class="gnzk-shop-buy">
+            <a href="/">前往购买</a>
+        </div>
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="gnzk-shop-comment">
+        {{#$value.productComment}}
+    </div>
+
+    {{/each}}
+
+</script>
+<?php include('../common/script.html') ?>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>比价搜索--分类</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../css/getCategory.css"/>
+</head>
+<body>
+<!--头部-->
+<?php include('../common/header.html')?>
+
+<div class="getCategory-func">
+    <div class="menuBar">
+
+    </div>
+    <div class="product">
+
+    </div>
+    <div class="saveMoney-page">
+        <div class="container">
+            <table width="100%">
+                <tbody>
+                <tr class="container_tr">
+                    <td><a href="javascript:void(0)" id="previous">上一页</a></td>
+                    <td id="selectPage-parent">
+                        <span class="page-box">1/4</span>
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        <ul id="selectPage">
+
+                        </ul>
+                    </td>
+                    <td><a href="javascript:void(0)" id="Next">下一页</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 底部-->
+<?php include('../common/footer.html') ?>
+
+<!-- 浮动的下载链接-->
+<?php include('../common/flowDownload.html') ?>
+
+<script id="menuBar-tpl" type="text/template">
+    {{ each list }}
+    <ul>
+        <li>&nbsp;&nbsp;<a href="/">首页</a><span class="glyphicon glyphicon-menu-right"></span> </li>
+        <li>&nbsp;&nbsp;<a href="/html/category.html?titleid={{ $value.titleid }}">全部分类</a><span class="glyphicon glyphicon-menu-right"></span> </li>
+        <li>&nbsp;&nbsp;<a href="/html/getCategory-function.html?categoryId={{ $value.categoryId }}">{{ $value.category }}</a> </li>
+        <li><button type="button" class="sel-btn">筛选</button></li>
+    </ul>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="fptv-shop-tpl">
+    {{ each result as value i  }}
+    <div class="media">
+        <a href="/html/getCategory-bijia.html?productId={{ value.productId }}">
+            <div class="media-left">
+                {{ #value.productImg }}
+            </div>
+            <div class="media-body">
+                <p>{{ value.productName }}</p>
+                <div ><span class="price"><em>{{ ProductPrice1(value.productPrice) }}</em>{{ ProductPrice2(value.productPrice)}}</span></div>
+                <div><span>{{ value.productQuote }}）</span><span id="fptv-comment">{{ value.productCom}}</span></div>
+            </div>
+        </a>
+    </div>
+    {{ /each }}
+</script>
+
+<?php include('../common/script.html') ?>
+</body>
+</html>

@@ -1,0 +1,335 @@
+.baiCaiJiaHeader{
+  height: 44px;
+  background-color: #e4393c;
+  position: relative;
+  width: 100%;
+  margin-top: -20px;
+  a{
+    position: absolute;
+    height: 44px;
+    width: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+  }
+  a.left{
+    left: 0;
+    //background: url("../imgs/icon_bar.png");
+    //background-size: 220px 132px;
+    //background-position: -90px -3px;
+    //background-origin: content-box;
+    //background-clip: content-box;
+    //padding: 12px;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='1.5em' height='1.5em'><path fill='#FFFFFF' d='M818.881422 747.988622 755.734756 812 313.503289 363.943111 313.480533 363.965867 250.311111 299.931733 755.734756-212.113778 818.881422-148.1024 376.672711 299.954489Z' transform='translate(0, 812) scale(1, -1)'/></svg>") ;
+  }
+  a.right{
+    right: 0;
+    top: 0;
+    background-image: url("http://m.manmanbuy.com/images/header_app.png");
+    background-size: 34px 34px;
+    padding: 5px;
+  }
+  >h1{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+}
+.titleParent{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  >ul{
+    //margin-left: -35px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+    >li{
+      height: 38px;
+      list-style: none;
+      float: left;
+      padding: 10px 10px;
+      padding-bottom: 0;
+      >a{
+        color: #333;
+      }
+    }
+    >li.active{
+      border-bottom: 2px solid red;
+    }
+  }
+  >span{
+    position: absolute;
+    width: 40px;
+    height: 39px;
+    background-color:#fbfbfb;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+}
+.baicaijia-block{
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/baicaijia-search.svg");
+  box-sizing: border-box;
+  padding: 10px;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-size: 22px auto;
+  background-position: center center;
+}
+.baicaijia-close{
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/baicaijia-close.svg");
+  box-sizing: border-box;
+  padding: 10px;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-size: 22px auto;
+  background-position: center center;
+}
+.baicaijia-search-bar{
+  display: none;
+  width: 100% ;
+  position: relative;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  background-color: transparent;
+  >input[type='search']{
+    width: 100%;
+    height: 35px;
+    margin-left: 10px;
+    padding-left: 30px;
+    border: none;
+    border: 1px solid #eee;
+    font-family: 'Î¢ÈíÑÅºÚ';
+  }
+  >i{
+    width:25px;
+    height: 25px;
+    position: absolute;
+    left: 10px ;
+    top: 0px;
+    background-image: url("../images/icon_bar.png");
+    background-size: 220px 132px;
+    background-position: -38px 5px;
+
+  }
+  >input[type='submit']{
+    position: absolute;
+    width: 80px;
+    height: 33px;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #eee;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+  }
+}
+.baicaijia-adv{
+  width: 100%;
+  >img{
+    display: block;
+    width: 100%;
+  }
+}
+.baicaijia-product{
+  width: 100%;
+  >ul{
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 10px;
+    background-color: #ddd;
+    >li{
+      list-style: none;
+      height: 150px;
+      margin-top: 10px;
+      background-color: #fff;
+      width: 100%;
+      position: relative;
+      >a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        >.baicaijia-productimg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          >img{
+            display: block;
+            width: 135px;
+            height: 130px;
+          }
+        }
+        >.baicaijia-productName{
+          position: absolute;
+          top: 10px;
+          left: 145px;
+          color: #222;
+        }
+        >.baicaijia-productPrice{
+          position: absolute;
+          left: 145px;
+          top: 30px;
+          font-size: 24px;
+          color: red;
+          >i{
+            font-size: 16px;
+            font-style: normal;
+
+          }
+          >em{
+            font-size: 12px;
+            font-style: normal;
+          }
+          >del{
+            font-size: 13px;
+            color: #a8a8a8;
+            position: absolute;
+            left: 100px;
+            top: 10px;
+          }
+        }
+      }
+      >.baicaijia-productCoupon{
+        position: absolute;
+        top: 72px;
+        left: 140px;
+        >a:nth-of-type(2){
+          border: 1px dotted red;
+          color: red;
+          display: block;
+          padding: 5px;
+          font-size: 13px;
+        }
+      }
+      >.baicaijia-productCouponRemain{
+        position: absolute;
+        top: 5px;
+        left: 100px;
+        >div{
+          >i{
+            position: absolute;
+            left: 40px;
+            top: 110px;
+            width: 70px;
+            border:1px solid red;
+            height: 9px;
+            border-radius: 4px;
+            background-color: pink;
+            >em{
+              background-color: red;
+              display: block;
+              height: 8px;
+              border-radius:4px;
+            }
+            >span{
+              font-size: 8px;
+              position: absolute;
+              top: -5px;
+              left: 25px;
+            }
+          }
+          >b{
+            position: absolute;
+            top: 105px;
+            left: 115px;
+            width: 80px;
+            color: #666;
+            font-size: 12px;
+          }
+        }
+      }
+      >.baicaijia-productHref{
+        >a{
+          position: absolute;
+          right: 10px;
+          top: 80px;
+          width: 68px;
+          height: 38px;
+          background-color: #ff5e5d;
+          border-radius: 4px;
+          color: #fff;
+          line-height: 38px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+    >li:nth-of-type(1){
+      margin-top: 0;
+    }
+  }
+}
+.baicaijia-top{
+  z-index: 99;
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  >span:nth-of-type(1){
+    display: block;
+    width: 60px;
+    height: 66px;
+    background-image: url("../images/baicaijia-mmmapp.png");
+    background-size: 60px 66px;
+  }
+  >span:nth-of-type(2){
+    display: inline-block;
+    position: absolute;
+    left: 11px ;
+    top: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 50% 50%;
+    background-image: url("../images/baicaijia-backtop.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center center;
+    display: none;
+  }
+}
+.baicaijia-loading{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  >img{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.HzSite-nav{
+  margin-top: 20px;
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  padding-left: 8px;
+  font-size: 15px;
+  line-height: 36px;
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+}
+
+

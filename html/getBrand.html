@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title自己起名字-->
+    <title>十大品牌</title>
+
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../css/brand/brand.css"/>
+</head>
+<body>
+<?php include('../common/header.html')?>
+
+<section id="brand" class="model">
+    <!--路径导航-->
+    <div class="product-title">
+        <ol class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="/html/brandTitle.html">全部分类</a></li>
+            <li id="title"><a href="#">品牌大全</a></li>
+        </ol>
+        <a class="btn btn-default" href="">筛选</a>
+    </div>
+
+    <!--品牌列表-->
+    <div class="category-list">
+        <div class="hd">
+            <h3>平板电视哪个牌子好</h3>
+        </div>
+        <div class="row clearfix brand-list">
+            <ul class="category-title">
+
+            </ul>
+        </div>
+        <div class="hd">
+            <h3>平板电视产品销量排行</h3>
+        </div>
+        <div class="product-list">
+
+        </div>
+        <div class="hd">
+            <h3>平板电视最新评论
+                <</h3>
+        </div>
+        <div class="bd pllist product-com">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 底部-->
+<?php include('../common/footer.html') ?>
+
+<!-- 浮动的下载链接-->
+<?php include('../common/flowDownload.html') ?>
+
+</body>
+
+
+<!--十大品牌列表模板-->
+<script type="text/html" id="brandListTpl">
+    {{each result as value i}}
+    <li><a href="productlist.html?categoryid={{value.categoryId}}&pageid=1"
+           title="{{value.brandName}}"><em class="top{{i+1}}">{{i+1}}</em>
+
+        <div class="inner">
+            <div class="tit">{{value.brandName}}</div>
+            <p>{{value.brandInfo}}</p></div>
+    </a></li>
+    {{/each}}
+</script>
+
+<!--品牌商品列表模版-->
+<script id="productListTpl" type="text/html">
+    {{each result as value i}}
+    <div class="media">
+        <a class="media-left" href="bijia.html?productId={{value.productId}}">
+            {{#value.productImg}}
+        </a>
+
+        <div class="media-body">
+            <a href="bijia.html?productId={{value.productId}}">
+                <h5>{{value.productName}}</h5>
+
+                <p class="price">{{value.productPrice}}  <span class="star">
+                        <em class="star1 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star2 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star3 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star4 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star5 glyphicon glyphicon-thumbs-up"></em>
+                    </span></p>
+
+                <em>{{value.productQuote}}</em><em>{{value.productCom}}</em>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<!--品牌商品评论模版-->
+<script type="text/html" id="productComTpl">
+    {{each result as value i}}
+    <li>
+        <a href="JavaScript:;">
+            <div class="protit">
+                <div class="pic">
+                    {{#result.product.productImg}}
+                </div>
+                <div class="tit">{{result.product.productName}}</div>
+            </div>
+
+            <div class="plbox">
+                <div class="name">{{value.comName}}
+                    <span class="star">
+                        <em class="star1 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star2 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star3 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star4 glyphicon glyphicon-thumbs-up"></em>
+                        <em class="star5 glyphicon glyphicon-thumbs-up"></em>
+                    </span>
+                    <i>{{value.comTime}}</i>
+                </div>
+                <div class="con">{{value.comContent}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<?php include('../common/script.html') ?>
+</body>
+</html>

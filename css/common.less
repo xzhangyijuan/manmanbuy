@@ -1,0 +1,121 @@
+a{
+  color: #5a5a5a;
+}
+a:hover,a:focus{
+  text-decoration: none;
+}
+.row{
+  margin-right: 0;
+}
+
+header{
+  height: 50px;
+  background-color: #FD831D;
+  border-bottom: 1px solid #e6e6e6;
+  >.header-logo{
+    padding: 12px 12px 12px 0;
+    width: 75%;
+    margin-left: 5px;
+    >a{
+      display: block;
+      height: 100%;
+      >img{
+        width: 185px;
+        overflow: hidden;
+      }
+    }
+  }
+  >.header-download{
+    padding: 7px 0 7px 7px;
+    >a > img{
+      max-width: 34px;
+      overflow: hidden;
+    }
+  }
+}
+
+//ËÑË÷À¸
+.index-search{
+  border-bottom: 1px solid #e6e6e6;
+  .index-searchForm{
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+    >.index-searchText > input{
+      border:none;
+      background-color: #f1f1f1;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      width: 90%;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+    >.index-searchBtn > input{
+      width: 63px;
+      background-color: #ff841d;
+      color: #fff;
+      border:none;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+// µ×²¿
+footer{
+  margin-top: 10px;
+  >.index-foot-top{
+    margin-top: 10px;
+    background: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+    clear: both;
+    >a{
+      float: left;
+      font-size: 14px;
+      border-right: 1px solid #c4c4c4;
+      text-align: center;
+      width: 30%;
+    }
+    >a:last-child{
+      width: 40%;
+      border-right: none;
+      >img{
+        width: 15px;
+        display: inline-block;
+        margin-top: -5px;
+        margin-right: 2px;
+      }
+    }
+  }
+  >.index-foot-bottom{
+    background: #efefef;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 0;
+    color: #666;
+    >p:first-child > a:first-child{
+      color: red;
+    }
+  }
+}
+
+//¸¡¶¯ÏÂÔØÁ´½Ó
+.index-flowDownload{
+  position: fixed;
+  right: 17px;
+  bottom: 30px;
+  z-index: 999;
+  >a > img{
+    width: 60px;
+  }
+}

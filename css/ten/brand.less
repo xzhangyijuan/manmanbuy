@@ -1,0 +1,232 @@
+@color: red;
+
+.brand-form {
+  /*企业简介*/
+  > .brand-intro {
+    > .brand-tit {
+      font-size: 18px;
+      margin: 10px;
+      padding-left: 10px;
+      color: #000;
+    }
+    > p {
+      color: #666;
+      font-size: 12px;
+      margin: 10px;
+      background-color: #fff;
+      line-height: 20px;
+      padding: 10px;
+    }
+  }
+  /*描述*/
+  > .brand-describe {
+    color: #666;
+    font-size: 12px;
+    margin: 10px;
+    background-color: #f7f7f7;
+    line-height: 20px;
+    padding: 10px;
+  }
+  /*导航和商品*/
+  > .brand-nav {
+    font-size: 14px;
+    background-color: #fff;
+    .nav-tabs {
+      li {
+        width: 25%;
+        margin: 0;
+        &.active {
+          > a {
+            color: red;
+          }
+        }
+        a {
+          color: #5a5a5a;
+          border: 0;
+          &:hover {
+            background-color: transparent;
+            border: none;
+          }
+          &:focus {
+            border: none;
+          }
+        }
+        &:hover {
+          border: none;
+        }
+        &:focus {
+          border: none;
+        }
+
+      }
+    }
+    .tab-content {
+      .media {
+        padding: 10px 8px;
+        font-size: 12px;
+        background-color: #FFFFFF;
+        position: relative;
+        > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          z-index: 99;
+          &:hover {
+            text-decoration: none;
+          }
+          &:focus {
+            text-decoration: none;
+          }
+          img {
+            width: 120px;
+          }
+          > .media-body {
+            color: #333333;
+            word-break: break-all;
+            font-size: 15px;
+            line-height: 28px;
+            height: 56px;
+            overflow: hidden;
+            > p {
+              font-size: 15px;
+              line-height: 28px;
+              height: 56px;
+            }
+            .price {
+              color: red;
+            }
+            > div {
+              &:first-of-type {
+                font-size: 18px;
+                > span {
+                  em {
+                    font-size: 12px;
+                  }
+                  &:last-child {
+                    color: #ff9e24;
+                    float: right;
+                  }
+                }
+              }
+              &:last-of-type {
+                font-size: 12px;
+                color: #a1a1a1;
+                line-height: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*评论*/
+  .brand-comment {
+    display: none;
+    background-color: rgba(125, 84, 84, .5);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    > .brand-content {
+      background-color: #fff;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 50%;
+      transform: translateY(-100%);
+      .brand-comment-close{
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        right:-15px;
+        top:-15px;
+        z-index: 999;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      .media {
+        font-size: 12px;
+        background-color: #FFFFFF;
+        position: relative;
+        > a {
+          padding-left: 20px;
+          padding-top: 20px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          z-index: 99;
+          &:hover {
+            text-decoration: none;
+          }
+          &:focus {
+            text-decoration: none;
+          }
+          img {
+            width: 120px;
+          }
+          > .media-body {
+            color: #333333;
+            word-break: break-all;
+            font-size: 15px;
+            line-height: 28px;
+            height: 56px;
+            overflow: hidden;
+            > p {
+              margin-top: 20px;
+              font-size: 15px;
+              height: 100%;
+              padding-left: 10px;
+            }
+          }
+        }
+        > div {
+          padding: 20px;
+          >p{
+            &:first-of-type{
+              color:#666;
+              line-height: 30px;
+              >span{
+                &:nth-of-type(2n){
+                  color:#ff9e24;
+                  margin-left: 5px;
+                }
+              }
+            }
+            &:last-of-type{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*相关链接*/
+.brand-link {
+  margin-top: 25px;
+  text-align: left;
+  padding-left: 10px;
+  > dl {
+    dt {
+      line-height: 24px;
+      margin-top: 25px;
+      text-align: left;
+      padding-left: 10px;
+    }
+    dd {
+      line-height: 24px;
+      a {
+        font-size: 12px;
+        color: #5a5a5a;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+

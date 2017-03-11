@@ -1,0 +1,22 @@
+define(['jquery', 'template'], function($, template){
+    /*=============方法的调用=============*/
+    init();
+    /*=============方法的定义=============*/
+    function init() {
+
+        getBrandTitle();
+    }
+
+    /*获取品牌列表数据*/
+    function getBrandTitle() {
+        $.get("http://139.199.157.195:9090/api/getbrandtitle", function (res) {
+            var html = template("proLstTpl", res);
+            $('.brand-List').html(html);
+
+            $('.list-title').on('click','> a',function(){
+                var brandTitle = $(this).find('h5').html().slice(0,-4);
+                localStorage.setItem('brandTitle', brandTitle);
+            })
+        });
+    }
+});

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>
+        最新优惠 - 省钱控 - 慢慢买
+    </title>
+    <?php include('../common/style.html')?>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/ten/common.css"/>
+    <link rel="stylesheet" href="../css/saveMoney.css"/>
+</head>
+<body>
+<div class=" brand-main  ">
+    <!-- 头部-->
+    <header class="gnzk-shop-header" id="header">
+        <a href="/" class="glyphicon glyphicon-menu-left"></a>
+
+        <h1>省钱控</h1>
+
+        <div class="gnzk-shop-header-bottom">
+            <a href="/"></a>
+        </div>
+    </header>
+
+    <!--商品列表-->
+    <div action="" class="" id="saveMoney-list">
+        <div class="container">
+            <!--商品列表的坑-->
+        </div>
+    </div>
+
+    <div class="saveMoney-page">
+        <div class="container">
+            <table width="100%">
+                <tbody>
+                <tr>
+                    <td><a href="#?PageID=1" id="previous">上一页</a></td>
+                    <td id="selectPage-parent">
+                        <span class="page-box">1/15</span>
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                        <ul id="selectPage">
+                            <li page="1" class="active">1/15</li>
+                            <li page="2">2/15</li>
+                            <li page="3">3/15</li>
+                            <li page="4">4/15</li>
+                            <li page="5">5/15</li>
+                            <li page="6">6/15</li>
+                            <li page="7">7/15</li>
+                            <li page="8">8/15</li>
+                            <li page="9">9/15</li>
+                            <li page="10">10/15</li>
+                            <li page="11">11/15</li>
+                            <li page="12">12/15</li>
+                            <li page="13">13/15</li>
+                            <li page="14">14/15</li>
+                            <li page="15">15/15</li>
+                        </ul>
+                    </td>
+                    <td><a href="#?PageID=2" id="Next">下一页</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 底部-->
+<?php include('../common/footer.html') ?>
+
+<!-- 浮动的下载链接-->
+<?php include('../common/flowDownload.html') ?>
+</div>
+
+
+<!--商品列表模板-->
+<script type="text/html" id="saveMoney-list-tpl">
+    {{ each result as value i }}
+    <div class="media">
+        <a href="/html/saveMoney-shop.html?productId={{ value.productId }}">
+            <div class="media-left">
+                {{ #value.productImgSm }}
+            </div>
+            <div class="media-body">
+                <p>{{ value.productName }}<span>{{ value.productPinkage }}</span></p>
+
+                <div>
+                    <span class="mall">{{ value.productFrom }} | {{ value.productTime }}</span>
+                    <span class="comment"><i class="iconfont">&#xe642;</i>&nbsp; {{ productComCount(value.productComCount) }}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{ /each }}
+</script>
+
+<?php include('../common/script.html') ?>
+</body>
+</html>
